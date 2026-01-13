@@ -1,0 +1,80 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    border-bottom: 2px solid #3c3c3c;
+}
+
+.left-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 60%;
+}
+.left-side img{
+    width: 165px;
+    cursor: pointer;
+}
+.left-side ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+.left-side ul li{
+    margin-right: 20px;
+    cursor: pointer;
+}
+.right-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: max(1vw, 12px);
+}
+.navbar .right-side select{
+    padding: 5px 8px;
+    background: transparent;
+    border-radius: 6px;
+    border: 2px solid white;
+    color: white;
+}
+.navbar .right-side select option{
+    background: #09005c;
+    color: white;
+}
+.navbar .right-side button{
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+    background: white;
+    gap: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    color: #393939;
+    cursor: pointer;
+}
+.navbar .right-side button img{
+    width: 13px;
+}
+@media (max-width:900px) {
+    .navbar{
+        padding: 20px 8%;
+    }
+    .navbar .right-side button{
+        padding: 8px 10px;
+        font-size: 14px;
+        gap: 8px;
+    }
+}
+@media (max-width:768px) {
+    .navbar{
+        padding: 20px 5%;
+    }
+    .navbar ul{
+        display: none;
+    }
+    
+}
