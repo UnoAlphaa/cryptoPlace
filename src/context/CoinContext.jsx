@@ -10,17 +10,17 @@ const CoinContextProvider = (props) =>{
         symbol:'$'
     });
 
-    const fetchAllCoins = async () =>{ 
-        const options = {
-            method: 'GET',
-            headers: {accept: 'application/json', 'x-cg-demo-api-key': 'CG-a9f8axp49gtm7dW4byr6v4ST'}
-          };
+        const fetchAllCoins = async () =>{ 
+                const options = {
+                        method: 'GET',
+                        headers: {accept: 'application/json', 'x-cg-demo-api-key': import.meta.env.VITE_COINGECKO_API_KEY}
+                    };
           
-          fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}`, options)
-            .then(res => res.json())
-            .then(res => setAllCoins(res))
-            .catch(err => console.error(err));
-     }
+                    fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}`, options)
+                        .then(res => res.json())
+                        .then(res => setAllCoins(res))
+                        .catch(err => console.error(err));
+         }
 
      useEffect(()=>{
         fetchAllCoins();
